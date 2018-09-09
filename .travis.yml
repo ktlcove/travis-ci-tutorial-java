@@ -1,14 +1,14 @@
 language: java
 jdk:
- - oraclejdk8
+- oraclejdk8
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
-  - ls && pwd
+- bash <(curl -s https://codecov.io/bash)
+- ls && pwd
 deploy:
   provider: releases
   api_key:
-    secure: YOUR_API_KEY_ENCRYPTED
-  file: "FILE TO UPLOAD"
-  skip_cleanup: true
+    secure: P1KNDu8Ayy4Yl7torAPoSydjAfY8GRNP8tdx/B5fdUwEKSHkTyKw/II6VtVhquHep5b1ROWAvR/VRySrFS3UYkYz/20++h6LkxOf6NpomJT/HKyhLzhHS9h2nUK0Yt+LdeQG/lHqVEizBK5JSXInCwod/gMWnohTpPmdXQwuUiSAnmyCmaOetBcQcU/IIv61amelPnp3IxyJSi8hMAPC6ojPQzZaoG4NHVe5+lHK5+nCoS+ZDe/F8Dr4g/fZgdt+8PWvvwIa2MTN4zgmnmqOdk+ouUupOhGHr3TrM4Klv8MOT4irTs97lUVuNfAS1BMn7pyrLPEgzd+gmKD05EKcL83Xq7SdD+/OqLOTS3MWv44j1GpgFnUqtICdIbT9tg9aW0XSlqS/NKho7TVB0hagk7IBD06QghsFE9YYRFFT4EO76/EUx30kERiSu+g1HVG3RKzcE3mDmo1jAjIVAHKKeng8IZznHUr1347e8Uw24zk/5/cPTfOdr9onj0mltwTjt6LHz7ix1MRFgYeOXTHXFL/kob/uoRvmX0Vf8EaHG1sV7REaZN1ueTYRySqnplKYu5gHLzFNhfqDP9JR48lwhQMuNKiHsxnffvRAgPcFhW0KcUvrIz9VfnC9EH99gHvWm5kwgHfFKKbG4RvrvFDZ7z1UfZWOx7zxzjQ5N+BlvxE=
+  file: target/target.tgz
   on:
+    repo: ktlcove/travis-ci-tutorial-java
     tags: true
